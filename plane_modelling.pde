@@ -11,7 +11,7 @@ float x, y, z;
 
 void setup() {
   size(1920, 1080, P3D);  // 3D desteğini aktif hale getirme
-  String portName = Serial.list()[0];
+  String portName = Serial.list()[0]; //Kartın takılı olduğu portun kaçıncı sırada olduğunu gösterir. Birden fazla port kullanılıyorsa kartın hangi sırada olduğuna aygıt yöneticisinden bakılmalıdır.
   myPort = new Serial(this, portName, 115200);
   myPort.bufferUntil('\n');
   
